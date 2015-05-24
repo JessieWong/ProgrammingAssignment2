@@ -5,7 +5,6 @@ makeCacheMatrix <- function(x = matrix()) {
         # stores the cached value
         # initialize to NULL
         cache <- NULL
-        
         # create the matrix in the working environment
         set <- function(y) {
                 x <<- y
@@ -32,8 +31,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## is stored in cache
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-        ## attempt to get the inverse of the matrix stored in cache
+        ## Return a matrix that is the inverse of 'x'  ## attempt to get the inverse of the matrix stored in cache
         cache <- x$getInverse()
         
         # return inverted matrix from cache if it exists
